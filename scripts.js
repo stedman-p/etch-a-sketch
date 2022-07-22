@@ -2,14 +2,25 @@
 const gameContainer = document.querySelector(".game");
 
 // get number of squares from input
-const numBoxInput = document.querySelector("#num-squares");
+const numBoxInput = document.querySelector("#num-squares-box");
+const numSliderInput = document.querySelector("#num-squares-slider");
+
 
 buildCanvas(numBoxInput.value);
-console.log(numBoxInput.value + " is the num");
+
+// listeners to change canvas size from input
+
+numSliderInput.addEventListener("change", () => {
+    buildCanvas(numSliderInput.value);
+})
+
+numBoxInput.addEventListener("change", () => {
+    buildCanvas(numBoxInput.value);
+});
 
 numBoxInput.addEventListener("blur", () => {
     if (numBoxInput.value === "") {
-        numBoxInput.value = "16";
+        numBoxInput.value = numSliderInput.value;
     }
     buildCanvas(numBoxInput.value);
 });
@@ -26,13 +37,6 @@ clearCanvasBtn.addEventListener("click", () => {
         buildCanvas(numBoxInput.value);
         canvasDiv.classList.remove("shake");
     }, 510);
-});
-
-numBoxInput.addEventListener("change", () => {
-    console.time("Build Canvas");
-    buildCanvas(numBoxInput.value);
-    console.timeEnd("Build Canvas");
-    console.log(`Built canvas of size ${numBoxInput.value}`)
 });
 
 function clearCanvas() {
