@@ -12,6 +12,7 @@ numBoxInput.addEventListener("blur", () => {
     }
     buildCanvas(numBoxInput.value);
 });
+
 numBoxInput.addEventListener("change", () => {
     buildCanvas(numBoxInput.value);
 });
@@ -35,6 +36,14 @@ function buildCanvas(sideLength) {
         newDiv.style.height = "100%";
         canvasDiv.appendChild(newDiv);
     }
+
+    pixels = document.querySelectorAll(".pixel");
+
+    pixels.forEach(pixel => {
+        pixel.addEventListener("mouseover", () => {
+            pixel.style.backgroundColor = "black";
+        })
+    });
 }
 
 // test creating a new pixel

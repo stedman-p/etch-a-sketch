@@ -15,6 +15,7 @@ html, body {
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    background-color: lightgray;
 }
 img, picture, video, canvas, svg {
     display: block;
@@ -56,7 +57,7 @@ input {
 .canvas {
     width: 35em;
     height: 35em;
-    background-color: lightgray;
+    background-color: white;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
@@ -88,10 +89,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .pixel { 
-    background-color: black;
+    background-color: white;
     padding: none;
-}
-
-.pixel:hover {
-    background-color: rgb(60, 60, 60);
 }
