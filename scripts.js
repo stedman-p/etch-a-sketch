@@ -17,8 +17,15 @@ numBoxInput.addEventListener("blur", () => {
 // button to clear canvas
 const clearCanvasBtn = document.querySelector("#clear-canvas");
 clearCanvasBtn.addEventListener("click", () => {
-    clearCanvas();
-    buildCanvas(numBoxInput.value);
+    // play shake animation
+    const canvasDiv = document.querySelector(".canvas");    
+    canvasDiv.classList.add("shake");
+    // remove shake class after animation is finished
+    setTimeout(() => {
+        clearCanvas();
+        buildCanvas(numBoxInput.value);
+        canvasDiv.classList.remove("shake");
+    }, 510);
 });
 
 numBoxInput.addEventListener("change", () => {
