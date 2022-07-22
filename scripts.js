@@ -29,13 +29,13 @@ numBoxInput.addEventListener("blur", () => {
 const clearCanvasBtn = document.querySelector("#clear-canvas");
 clearCanvasBtn.addEventListener("click", () => {
     // play shake animation
-    const canvasDiv = document.querySelector(".canvas");    
-    canvasDiv.classList.add("shake");
+    const etchASketch = document.querySelector(".content");    
+    etchASketch.classList.add("shake");
     // remove shake class after animation is finished
     setTimeout(() => {
         clearCanvas();
         buildCanvas(numBoxInput.value);
-        canvasDiv.classList.remove("shake");
+        etchASketch.classList.remove("shake");
     }, 510);
 });
 

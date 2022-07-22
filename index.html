@@ -12,28 +12,25 @@
     <div class="container">
         <div class="content">
             <div class="header">
-                <h1>Play Etch-a-Sketch!</h1>
+                <h1>Etch-A-Sketch!</h1>
             </div>
             <div class="canvas-container">
-                <div class="sidebar">
-                    <h2>Tools</h2>
-                    <ul>
+                <div class="canvas"></div>
+                <div class="toolbar">
+                    <ul class="tools">
                         <li>
-                            <span>
-                                <label for="num-squares">Dimension:
-                                    <input type="number" id="num-squares-box" value="32" min="8" max="64" oninput="this.nextElementSibling.value=parseInt(this.value)">
-                                    <input type="range" id="num-squares-slider" value="32" min="8" max="64" oninput="this.previousElementSibling.value=parseInt(this.value)">
-                                </label>
-                            </span>
+                            <label class="instruction-text" for="num-squares">set fineness:
+                                <input type="number" id="num-squares-box" value="32" min="8" max="64" oninput="this.nextElementSibling.value=parseInt(this.value)">
+                                <input type="range" id="num-squares-slider" value="32" min="8" max="64" oninput="this.previousElementSibling.value=parseInt(this.value)">
+                            </label>
                         </li>
                         <li>
                             <button id="clear-canvas">
-                                Shake Clear
+                                shake to clear
                             </button>
                         </li>
                     </ul>
                 </div>
-                <div class="canvas"></div>
             </div>
         </div>
     </div>

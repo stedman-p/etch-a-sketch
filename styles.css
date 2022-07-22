@@ -5,7 +5,6 @@
 
 * {
     margin: 0;
-    border: .005em solid darkred;
     box-sizing: border-box;
 }
 
@@ -15,7 +14,7 @@ html, body {
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    background-color: lightgray;
+    background-color: rgb(246, 246, 246);
 }
 img, picture, video, canvas, svg {
     display: block;
@@ -34,41 +33,95 @@ input {
     padding: 0;
 }
 
+@font-face {
+    font-family: "Fortrack";
+    src: "./fortrack-font/FortrackRegular-6G8v.otf", format("opentype");
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(232, 232, 232);
+}
+
+h1 {
+    margin: .5em 0em .7em;
+    text-align: center;
+}
+
 :root {
     --max-width: 50em;
 }
 
 .container {
+    font-family: "Fortrack", "Helvetica";
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: a;
 }
 
 .content {
     width: var(--max-width);
+    border-radius: 3em;
+    background-color:#e40e0b;
+    box-shadow: 1em 1em 1em rgb(194, 201, 207);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 35em;
+    display: flex;
+    justify-content: center;
 }
 
 .canvas-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .canvas {
     width: 35em;
     height: 35em;
-    background-color: white;
+    background-color: rgb(228, 228, 228);
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
+    gap: 0.05em;
     border: none;
 }
 
-.sidebar {
-    max-width: 15em;
+.toolbar {
+    height: fit-content;
+    width: 35em;
+    /* margin-bottom: 1.8em; */
+
+    background-color: #e40e0b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-div.sidebar > ul {
+.tools {
+    width: 35em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.instruction-text {
+    font-weight: bold;
+}
+
+div.toolbar > h2 {
+    text-align: center;
+}
+
+div.toolbar > ul {
     list-style: none;
     margin: 1em;
     padding: 0;
@@ -77,6 +130,10 @@ div.sidebar > ul {
 input[type="number"] {
     width: 3em;
     text-align: center;
+}
+
+input[type="range"] {
+    cursor: ew-resize;
 }
 
 /* always show up and down arrows */
@@ -89,8 +146,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .pixel { 
-    background-color: white;
-    padding: none;
+    background-color: lightgray;
 }
 
 .shake {
