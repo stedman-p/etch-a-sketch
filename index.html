@@ -21,7 +21,8 @@
                         <li>
                             <span>
                                 <label for="num-squares">Dimension:
-                                    <input type="number" id="num-squares" value="32" min="8" max="64">
+                                    <input type="number" name="num-squares" value="32" min="8" max="64" oninput="this.nextElementSibling.value=parseInt(this.value)">
+                                    <input type="range" id="num-squares" value="32" min="8" max="64" oninput="this.previousElementSibling.value=parseInt(this.value)">
                                 </label>
                             </span>
                         </li>
