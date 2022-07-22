@@ -1,0 +1,97 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+* {
+    margin: 0;
+    border: .005em solid darkred;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+#root, #__next {
+    isolation: isolate;
+}
+input {
+    padding: 0;
+}
+
+:root {
+    --max-width: 50em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: a;
+}
+
+.content {
+    width: var(--max-width);
+}
+
+.canvas-container {
+    display: flex;
+}
+
+.canvas {
+    width: 35em;
+    height: 35em;
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    border: none;
+}
+
+.sidebar {
+    max-width: 15em;
+}
+
+div.sidebar > ul {
+    list-style: none;
+    margin: 1em;
+    padding: 0;
+}
+
+input[type="number"] {
+    width: 3em;
+    text-align: center;
+}
+
+/* always show up and down arrows */
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+
+.pixel { 
+    background-color: black;
+    padding: none;
+}
+
+.pixel:hover {
+    background-color: rgb(60, 60, 60);
+}
