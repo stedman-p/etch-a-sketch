@@ -13,6 +13,9 @@
         <div class="content">
             <div class="header">
                 <h1>Etch-A-Sketch!</h1>
+                <a href="https://github.com/stedman-p/etch-a-sketch" title="My Github">
+                    <img src="./img/GitHub-Mark-32px.png" alt="Github Logo">
+                </a>
             </div>
             <div class="canvas-container">
                 <div class="canvas"></div>
@@ -20,7 +23,7 @@
                     <ul class="tools">
                         <li>
                             <label class="instruction-text" for="num-squares">set fineness:
-                                <input type="number" id="num-squares-box" value="32" min="8" max="64" oninput="this.nextElementSibling.value=parseInt(this.value)">
+                                <!-- <input type="number" id="num-squares-box" value="32" min="8" max="64" oninput="this.nextElementSibling.value=parseInt(this.value)"> -->
                                 <input type="range" id="num-squares-slider" value="32" min="8" max="64" oninput="this.previousElementSibling.value=parseInt(this.value)">
                             </label>
                         </li>

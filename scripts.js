@@ -6,7 +6,7 @@ const numBoxInput = document.querySelector("#num-squares-box");
 const numSliderInput = document.querySelector("#num-squares-slider");
 
 
-buildCanvas(numBoxInput.value);
+buildCanvas(numSliderInput.value);
 
 // listeners to change canvas size from input
 
@@ -14,16 +14,16 @@ numSliderInput.addEventListener("change", () => {
     buildCanvas(numSliderInput.value);
 })
 
-numBoxInput.addEventListener("change", () => {
-    buildCanvas(numBoxInput.value);
-});
+// numBoxInput.addEventListener("change", () => {
+//     buildCanvas(numBoxInput.value);
+// });
 
-numBoxInput.addEventListener("blur", () => {
-    if (numBoxInput.value === "") {
-        numBoxInput.value = numSliderInput.value;
-    }
-    buildCanvas(numBoxInput.value);
-});
+// numBoxInput.addEventListener("blur", () => {
+//     if (numBoxInput.value === "") {
+//         numBoxInput.value = numSliderInput.value;
+//     }
+//     buildCanvas(numBoxInput.value);
+// });
 
 // button to clear canvas
 const clearCanvasBtn = document.querySelector("#clear-canvas");
@@ -34,7 +34,7 @@ clearCanvasBtn.addEventListener("click", () => {
     // remove shake class after animation is finished
     setTimeout(() => {
         clearCanvas();
-        buildCanvas(numBoxInput.value);
+        buildCanvas(numSliderInput.value);
         etchASketch.classList.remove("shake");
     }, 510);
 });
